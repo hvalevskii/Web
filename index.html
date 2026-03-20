@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Облік замовлень на підприємстві</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Система обліку замовлень</h1>
+        <nav>
+            <ul>
+                <li><a href="#orders">Замовлення</a></li>
+                <li><a href="#clients">Клієнти</a></li>
+                <li><a href="#products">Товари</a></li>
+                <li><a href="#reports">Звіти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="orders">
+            <h2>Список замовлень</h2>
+            <button type="button">Додати замовлення</button>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Дата</th>
+                        <th>Клієнт</th>
+                        <th>Сума</th>
+                        <th>Статус</th>
+                        <th>Дії</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2024-05-20</td>
+                        <td>ТОВ "Приклад"</td>
+                        <td>1500.00 грн</td>
+                        <td>В обробці</td>
+                        <td>
+                            <button>Редагувати</button>
+                            <button>Видалити</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="clients">
+            <h2>Клієнти</h2>
+            <form>
+                <fieldset>
+                    <legend>Новий клієнт</legend>
+                    <label for="client-name">Назва/ПІБ:</label>
+                    <input type="text" id="client-name" name="name" required>
+                    
+                    <label for="client-phone">Телефон:</label>
+                    <input type="tel" id="client-phone" name="phone">
+                    
+                    <button type="submit">Зберегти клієнта</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="products">
+            <h2>Каталог меблів</h2>
+            <ul>
+                <li>Стіл обідній (дуб) - 4500 грн</li>
+                <li>Стілець офісний (ергономічний) - 2200 грн</li>
+                <li>Диван кутовий "Комфорт" - 15800 грн</li>
+                <li>Шафа-купе дводверна - 8900 грн</li>
+            </ul>
+        </section>
+
+        <section id="create-order">
+            <h2>Створити замовлення</h2>
+            <form>
+                <div>
+                    <label for="select-client">Виберіть клієнта:</label>
+                    <select id="select-client">
+                        <option value="1">ТОВ "Приклад"</option>
+                        <option value="2">Іванов І.І.</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="select-product">Виберіть меблі:</label>
+                    <select id="select-product" multiple>
+                        <option value="p1">Стіл обідній</option>
+                        <option value="p2">Стілець офісний</option>
+                        <option value="p3">Диван кутовий</option>
+                        <option value="p4">Шафа-купе</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="order-date">Дата:</label>
+                    <input type="date" id="order-date">
+                </div>
+                <button type="submit">Оформити замовлення</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Лабораторна робота: Облік замовлень</p>
+    </footer>
+    <div class="system-status">Система: Онлайн</div>
+</body>
+</html>
